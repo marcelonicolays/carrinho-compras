@@ -1,4 +1,4 @@
-# Carrinh de compras
+# Carrinho de compras
 
 Desenvolvendo lógica de programação Alura!
 
