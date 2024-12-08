@@ -5,7 +5,7 @@ botaoLimpar.setAttribute('disabled', true);
 let textoTotal = document.getElementById('valor-total');
 textoTotal.innerHTML = 'R$ 0,00';
 let total = 0;
-
+console.log(itensCarrinho.querySelector('.carrinho__produtos__produto'));
 
 function adicionar(){
 let item = document.getElementById('produto').value;
@@ -36,12 +36,11 @@ textoTotal.innerHTML = total;
 }
 
 function limpar(){
-    itensCarrinho.innerHTML = '';
-    itensCarrinho.innerHTML = 'Nenhum item adicionado';
     total = 0;
     textoTotal.innerHTML = total;
     botaoLimpar.className = 'botao-form botao-limpar';
     botaoLimpar.setAttribute('disabled', true);
+    itensCarrinho.innerHTML = '<section class="carrinho__produtos__produto">Nenhum produto</section>';
 }
 
 function extrairPreco(texto) {  // Modelo fornecido Copilot IA.
