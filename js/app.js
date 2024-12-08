@@ -13,14 +13,13 @@ let quantidade = document.getElementById('quantidade').value;
 let preco = extrairPreco(item);
 let produto = extrairNomeProduto(item);
 let soma = preco * quantidade;
-console.log(botaoLimpar.classList);
 
-if (quantidade <= 0){
+if (quantidade <= 0){ //Verificar quantidade
     alert('Por favor digite uma quantidade válida.');
     return;
 }
 
-if (botaoLimpar.classList = 'botao-form', 'botao-limpar'){
+if (botaoLimpar.classList = 'botao-form', 'botao-limpar'){ // verificar de o botão está habilitado.
     botaoLimpar.className = 'botao-form botao-adicionar';
     botaoLimpar.removeAttribute('disabled');
 }
@@ -45,15 +44,15 @@ function limpar(){
     botaoLimpar.setAttribute('disabled', true);
 }
 
-function extrairPreco(texto) { 
+function extrairPreco(texto) {  // Modelo fornecido Copilot IA.
     const resultado = texto.match(/\d+/); 
     return resultado ? parseInt(resultado[0], 10) : null;
 }
-function extrairNomeProduto(texto) { 
+function extrairNomeProduto(texto) { //Padrão fornecido Copilot IA.
     return texto.split(' - ')[0];
 }
 
-function adicionarProduto(qtde, nome, preco) { 
+function adicionarProduto(qtde, nome, preco) { //Padrão fornecido Copilot IA.
     const novoProduto = document.createElement('section');
     novoProduto.className = 'carrinho__produtos__produto';
     novoProduto.innerHTML = `<span class="texto-azul">${qtde}x</span> ${nome} <span class="texto-azul">R$${preco}</span>`;
